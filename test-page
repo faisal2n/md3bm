@@ -1,0 +1,183 @@
+<!-- Card -->
+<div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="quotes" src="https://faisal2n.github.io/md3bm/quotes.svg" alt="alternative">
+                        <div class="card-body">
+                            <p class="testimonial-text">Suspendisse vitae enim arcu. Aliqu convallis risus a felis blandit, at mollis nisi bibendum aliquam noto ricos</p>
+                            <div class="testimonial-author">Roe Smith</div>
+                            <div class="occupation">General Manager, Presentop</div>
+                        </div>
+                        <div class="gradient-floor red-to-blue"></div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="quotes" src="https://faisal2n.github.io/md3bm/quotes.svg" alt="alternative">
+                        <div class="card-body">
+                            <p class="testimonial-text">Suspendisse vitae enim arcu. Aliqu convallis risus a felis blandit, at mollis nisi bibendum aliquam noto ricos</p>
+                            <div class="testimonial-author">Sam Bloom</div>
+                            <div class="occupation">General Manager, Presentop</div>
+                        </div>
+                        <div class="gradient-floor blue-to-purple"></div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="quotes" src="https://faisal2n.github.io/md3bm/quotes.svg" alt="alternative">
+                        <div class="card-body">
+                            <p class="testimonial-text">Suspendisse vitae enim arcu. Aliqu convallis risus a felis blandit, at mollis nisi bibendum aliquam noto ricos</p>
+                            <div class="testimonial-author">Bill McKenzie</div>
+                            <div class="occupation">General Manager, Presentop</div>
+                        </div>
+                        <div class="gradient-floor purple-to-green"></div>
+                    </div>
+                    <!-- end of card -->
+                    
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="quotes" src="https://faisal2n.github.io/md3bm/quotes.svg" alt="alternative">
+                        <div class="card-body">
+                            <p class="testimonial-text">Suspendisse vitae enim arcu. Aliqu convallis risus a felis blandit, at mollis nisi bibendum aliquam noto ricos</p>
+                            <div class="testimonial-author">Vanya Dropper</div>
+                            <div class="occupation">General Manager, Presentop</div>
+                        </div>
+                        <div class="gradient-floor red-to-blue"></div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="quotes" src="https://faisal2n.github.io/md3bm/quotes.svg" alt="alternative">
+                        <div class="card-body">
+                            <p class="testimonial-text">Suspendisse vitae enim arcu. Aliqu convallis risus a felis blandit, at mollis nisi bibendum aliquam noto ricos</p>
+                            <div class="testimonial-author">Lefty Brown</div>
+                            <div class="occupation">General Manager, Presentop</div>
+                        </div>
+                        <div class="gradient-floor blue-to-purple"></div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="quotes" src="https://faisal2n.github.io/md3bm/quotes.svg" alt="alternative">
+                        <div class="card-body">
+                            <p class="testimonial-text">Suspendisse vitae enim arcu. Aliqu convallis risus a felis blandit, at mollis nisi bibendum aliquam noto ricos</p>
+                            <div class="testimonial-author">Susane Blake</div>
+                            <div class="occupation">General Manager, Presentop</div>
+                        </div>
+                        <div class="gradient-floor purple-to-green"></div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div><!-- Card -->
+<style>
+    .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(var(--bs-gutter-y) * -1);
+      margin-right: calc(var(--bs-gutter-x)/ -2);
+      margin-left: calc(var(--bs-gutter-x)/ -2);
+  }
+  .cards-2 .card {
+      position: relative;
+      margin-bottom: 5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px -1px rgb(0 0 0 / 10%);
+  }
+  .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: .25rem;
+  }
+
+  .cards-2 .card .quotes {
+      position: absolute;
+      top: -15px;
+      right: 0;
+      left: 0;
+      width: 48px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .cards-2 .card-body {
+      padding: 3.5rem 2rem 3.125rem 2rem;
+  }
+
+  .card-body {
+      flex: 1 1 auto;
+      padding: 1rem 1rem;
+  }
+
+  .cards-2 .testimonial-author {
+      margin-bottom: 0.125rem;
+      color: #223150;
+  }
+
+  .testimonial-author {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+  }
+
+  .cards-2 .occupation {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+  }
+
+  .cards-2 .card .gradient-floor.blue-to-purple {
+      background: linear-gradient(to right, #0092ff, #637eff);
+  }
+
+  .cards-2 .card .gradient-floor {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 10px;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+
+  @media (min-width: 1200px){
+  .cards-2 .card:nth-of-type(3n+2) {
+      margin-right: 1.125rem;
+      margin-left: 1.125rem;
+  }}
+
+  @media (min-width: 992px){
+  .cards-2 .card:nth-of-type(3n+2) {
+      margin-right: 1rem;
+      margin-left: 1rem;
+  }}
+  @media (min-width: 1200px){
+  .cards-2 .card {
+      width: 356px;
+  }}
+  @media (min-width: 992px){
+  .cards-2 .card {
+      display: inline-block;
+      width: 298px;
+      vertical-align: top;
+  }}
+
+  @media (min-width: 992px){
+.col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    }}
+</style>
