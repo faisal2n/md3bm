@@ -1,35 +1,4 @@
 // Multi Feed Loader Script by Taufik Nurrohman
 // URL: http://www.dte.web.id, https://plus.google.com/108949996304093815163/about
 // URL: http://www.md3bm.com
-var mf_defaults={feedsUri:[
-        {
-            name: "أدوات وخدمات",
-            url: "https://www.md3bm.com/",
-            tag: "أدوات%20وخدمات"
-        },
-        {
-            name: "مواقع إلكترونية",
-            url: "https://www.md3bm.com/",
-            tag: "مواقع إلكترونية"
-        },
-        {
-            name: "الربح من لإنترنت",
-            url: "https://www.md3bm.com/",
-            tag: "الربح%20من%20الإنترنت"
-        },
-        {
-            name: "تطوير ويب",
-            url: "https://www.md3bm.com/",
-            tag: "تطوير%20ويب"
-        },
-        {
-            name: "تحسين محركات البحث SEO",
-            url: "https://www.md3bm.com/",
-            tag: "تحسين%20محركات%20البحث%20SEO"
-        },
-        {
-            name: "أفضل المواقع",
-            url: "https://www.md3bm.com/",
-            tag: "أفضل%20المواقع"
-        }
-    ],numPost:4,showThumbnail:true,showSummary:true,summaryLength:80,titleLength:"auto",thumbSize:72,newTabLink:false,containerId:"feed-list-container",listClass:"list-entries",readMore:{text:"المزيد من المقالات",endParam:"?max-results=20"},autoHeight:false,current:0,onLoadFeed:function(a){},onLoadComplete:function(){},loadFeed:function(c){var d=document.getElementsByTagName("head")[0],a=document.getElementById(this.containerId),b=document.createElement("script");b.type="text/javascript";b.src=this.feedsUri[c].url+"/feeds/posts/summary"+(this.feedsUri[c].tag?"/-/"+this.feedsUri[c].tag:"")+"?alt=json-in-script&max-results="+this.numPost+"&callback=listEntries";d.appendChild(b)}};for(var i in mf_defaults){mf_defaults[i]=(typeof(multiFeed[i])!==undefined&&typeof(multiFeed[i])!=="undefined")?multiFeed[i]:mf_defaults[i]}function listEntries(q){var p=q.feed.entry,c=mf_defaults,h=document.getElementById(c.containerId),a=document.createElement("div"),d="<ul>",l=c.feedsUri.length,n,k,m,g;for(var f=0;f<c.numPost;f++){if(f==p.length){break}n=(c.titleLength!=="auto")?p[f].title.$t.substring(0,c.titleLength)+(c.titleLength<p[f].title.$t.length?"&hellip;":""):p[f].title.$t;m=("summary" in p[f])?p[f].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,""):"";m=(c.summaryLength<m.length)?m.substring(0,c.summaryLength)+"&hellip;":m;g=("media$thumbnail" in p[f])?'<img src="'+p[f].media$thumbnail.url.replace(/\/s72(\-c)?\//,"/s"+c.thumbSize+"-c/")+'" style="width:'+c.thumbSize+"px;height:"+c.thumbSize+'px;">':'<span class="fake-img" style="width:'+c.thumbSize+"px;height:"+c.thumbSize+'px;"></span>';for(var e=0,b=p[f].link.length;e<b;e++){k=(p[f].link[e].rel=="alternate")?p[f].link[e].href:"#"}d+='<li><div class="inner"'+(!c.autoHeight?' style="height:'+c.thumbSize+'px;overflow:hidden;"':"")+">";d+=(c.showThumbnail)?g:"";d+='<div class="title"><a href="'+k+'"'+(c.newTabLink?' target="_blank"':"")+">"+n+"</a></div>";d+='<div class="summary">';d+="<span"+(!c.showSummary?' style="display:none;"':"")+">";d+=(c.showSummary)?m:"";d+="</span></div>";d+='<span style="display:block;clear:both;"></span></div></li>'}d+="</ul>";d+='<div class="more-link"><a href="'+c.feedsUri[c.current].url.replace(/\/$/,"")+"/search/label/"+c.feedsUri[c.current].tag+c.readMore.endParam+'"'+(c.newTabLink?' target="_blank"':"")+">"+c.readMore.text+"</a></div>";a.className=c.listClass;a.innerHTML='<div class="main-title"><h4>'+c.feedsUri[c.current].name+"</h4></div>"+d;h.appendChild(a);c.onLoadFeed(c.current);if((c.current+1)<l){c.loadFeed(c.current+1)}if((c.current+1)==l){c.onLoadComplete()}c.current++}mf_defaults.loadFeed(0);
+var mf_defaults={feedsUri:[{name:"أدوات وخدمات",url:"https://www.md3bm.com/",tag:"أدوات%20وخدمات"},{name:"مواقع إلكترونية",url:"https://www.md3bm.com/",tag:"مواقع إلكترونية"},{name:"الربح من لإنترنت",url:"https://www.md3bm.com/",tag:"الربح%20من%20الإنترنت"},{name:"تطوير ويب",url:"https://www.md3bm.com/",tag:"تطوير%20ويب"},{name:"تحسين محركات البحث SEO",url:"https://www.md3bm.com/",tag:"تحسين%20محركات%20البحث%20SEO"},{name:"أفضل المواقع",url:"https://www.md3bm.com/",tag:"أفضل%20المواقع"}],numPost:4,showThumbnail:!0,showSummary:!0,summaryLength:80,titleLength:"auto",thumbSize:72,newTabLink:!1,containerId:"feed-list-container",listClass:"list-entries",readMore:{text:"المزيد من المقالات",endParam:"?max-results=20"},autoHeight:!1,current:0,onLoadFeed:function(e){},onLoadComplete:function(){},loadFeed:function(e){var t=document.getElementsByTagName("head")[0],a=(document.getElementById(this.containerId),document.createElement("script"));a.type="text/javascript",a.src=this.feedsUri[e].url+"/feeds/posts/summary"+(this.feedsUri[e].tag?"/-/"+this.feedsUri[e].tag:"")+"?alt=json-in-script&max-results="+this.numPost+"&callback=listEntries",t.appendChild(a)}};for(var i in mf_defaults)mf_defaults[i]=void 0!==typeof multiFeed[i]&&void 0!==multiFeed[i]?multiFeed[i]:mf_defaults[i];function listEntries(e){for(var t,a,i,n,l=e.feed.entry,s=mf_defaults,r=document.getElementById(s.containerId),m=document.createElement("div"),d="<ul>",u=s.feedsUri.length,h=0;h<s.numPost&&h!=l.length;h++){t="auto"!==s.titleLength?l[h].title.$t.substring(0,s.titleLength)+(s.titleLength<l[h].title.$t.length?"&hellip;":""):l[h].title.$t,i="summary"in l[h]?l[h].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,""):"",i=s.summaryLength<i.length?i.substring(0,s.summaryLength)+"&hellip;":i,n="media$thumbnail"in l[h]?'<img src="'+l[h].media$thumbnail.url.replace(/\/s72(\-c)?\//,"/s"+s.thumbSize+"-c/")+'" style="width:'+s.thumbSize+"px;height:"+s.thumbSize+'px;">':'<span class="fake-img" style="width:'+s.thumbSize+"px;height:"+s.thumbSize+'px;"></span>';for(var o=0,c=l[h].link.length;o<c;o++)a="alternate"==l[h].link[o].rel?l[h].link[o].href:"#";d+='<li><div class="inner"'+(s.autoHeight?"":' style="height:'+s.thumbSize+'px;overflow:hidden;"')+">",d+=s.showThumbnail?n:"",d+='<div class="title"><a href="'+a+'"'+(s.newTabLink?' target="_blank"':"")+">"+t+"</a></div>",d+='<div class="summary">',d+="<span"+(s.showSummary?"":' style="display:none;"')+">",d+=s.showSummary?i:"",d+="</span></div>",d+='<span style="display:block;clear:both;"></span></div></li>'}d+="</ul>",d+='<div class="more-link"><a href="'+s.feedsUri[s.current].url.replace(/\/$/,"")+"/search/label/"+s.feedsUri[s.current].tag+s.readMore.endParam+'"'+(s.newTabLink?' target="_blank"':"")+">"+s.readMore.text+"</a></div>",m.className=s.listClass,m.innerHTML='<div class="main-title"><h4>'+s.feedsUri[s.current].name+"</h4></div>"+d,r.appendChild(m),s.onLoadFeed(s.current),s.current+1<u&&s.loadFeed(s.current+1),s.current+1==u&&s.onLoadComplete(),s.current++}mf_defaults.loadFeed(0);
