@@ -218,12 +218,12 @@ HijriDate.constInterval = -42521608800000; // -42521587200000;
 	// value of time interval in milliseconds
 	// from July 18, 622AD 06:00 PM to January 1, 1970AD, 00:00 AM
 
-HijriDate.monthNames = ["Muharram", "Safar", "Rabi'ul-Awwal", "Rabi'ul-Akhir", "Jumadal-Ula", "Jumadal-Akhir",
-					   "Rajab", "Sha'ban", "Ramadan", "Syawwal", "Dhul-Qa'da", "Dhul-Hijja"];
+HijriDate.monthNames = ["محرم", "صفر", "ربيع أول", "ربيع ثاني", "جماد أول", "جماد صاني",
+					   "رجب", "شعبان", "رمضان", "شوال", "ذي القعدة", "ذي الحجة"];
 
-HijriDate.monthShortNames = ['Muh', 'Saf', 'RAw', 'RAk', 'JAw', 'JAk', 'Raj', 'Sha', 'Ram', 'Sya', 'DhQ', 'DhH'];
+HijriDate.monthShortNames = ['مح', 'صف', 'ر أ', 'ر ث', 'ج أ', 'ج ث', 'رج', 'شع', 'رمض', 'شو', 'ذ ق', 'ذ ح'];
 
-HijriDate.weekdayNames = ["Ahad", "Ithnin", "Thulatha", "Arba'a", "Khams", "Jumu'ah", "Sabt"];
+HijriDate.weekdayNames = ["أحد", "إثنين", "ثلاثاء", "أربعاء", "خميس", "جمعة", "سبت"];
 
 HijriDate.weekdayShortNames = ['Ahd', 'Ith', 'Thu', 'Arb', 'Kha', 'Jum', 'Sab'];
 					   
