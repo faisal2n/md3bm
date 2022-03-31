@@ -225,7 +225,7 @@ HijriDate.monthShortNames = ['مح', 'صف', 'ر أ', 'ر ث', 'ج أ', 'ج ث',
 
 HijriDate.weekdayNames = ["أحد", "إثنين", "ثلاثاء", "أربعاء", "خميس", "جمعة", "سبت"];
 
-HijriDate.weekdayShortNames = ['Ahd', 'Ith', 'Thu', 'Arb', 'Kha', 'Jum', 'Sab'];
+HijriDate.weekdayShortNames = ['أحد', 'إثن', 'ثلا', 'أرب', 'خم', 'جمع', 'سبت'];
 					   
 HijriDate.toDigit = function(num, digit) {
 	var ns = num.toString();
@@ -248,13 +248,13 @@ HijriDate.parseInt = function(num, def) {
 	return isNaN(res) ? def : res;
 }
 
-Date.monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+Date.monthNames = ['يناير', 'فبراير', 'مارس', 'إبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
 
-Date.monthShortNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+Date.monthShortNames = ['ينا', 'فبر', 'مار', 'إبر', 'ماي', 'يون', 'يول', 'أغس', 'سبت', 'أكت', 'نوف', 'ديس'];
 
-Date.weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
+Date.weekdayNames = ['أحد', 'إثنين', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعة', 'سبت' ];
 
-Date.weekdayShortNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+Date.weekdayShortNames = ['أحد', 'إثن', 'ثلا', 'أرب', 'خم', 'جمع', 'سبت'];
 
 Date.javaWeekdayNames = ['Legi', 'Pahing', 'Pon', 'Wage', 'Kliwon'];
 
